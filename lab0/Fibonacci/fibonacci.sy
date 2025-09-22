@@ -1,0 +1,78 @@
+// 文件名: fibonacci_and_computation.sy
+
+/*
+ * SysY 语言实验程序：
+ * 复杂版斐波那契计算。
+ * 特性：
+ * 1. 输入与输出
+ * 2. 递归与迭代
+ * 3. 数值运算（+ - * / %）
+ * 4. 条件分支（if-else, 嵌套条件）
+ * 5. 循环（while）
+ * 6. 多函数调用
+ */
+
+// 库函数声明
+int getint();        // 输入整数
+int putint(int a);   // 输出整数
+int putch(int c);    // 输出字符
+int putf(char str[]); // 输出字符串（如果库支持）
+
+// 递归计算 Fibonacci
+int fibonacci_recursive(int n) {
+  if (n <= 1) {
+    return n;
+  }
+  return fibonacci_recursive(n - 1) + fibonacci_recursive(n - 2);
+}
+
+// 迭代计算 Fibonacci
+int fibonacci_iterative(int n) {
+  int a, b, c, i;
+  a = 0;
+  b = 1;
+  if (n == 0) return a;
+  if (n == 1) return b;
+
+  i = 2;
+  while (i <= n) {
+    c = a + b;
+    a = b;
+    b = c;
+    i = i + 1;
+  }
+  return b;
+}
+
+
+// 主函数
+int main() {
+  int n;
+  int fib1, fib2, fact;
+
+  putf("请输入一个整数 n：\n");
+  n = getint();
+
+  // 使用递归计算 Fibonacci
+  fib1 = fibonacci_recursive(n);
+  putf("递归 Fibonacci 结果：");
+  putint(fib1);
+  putch(10); // 换行
+
+  // 使用迭代计算 Fibonacci
+  fib2 = fibonacci_iterative(n);
+  putf("迭代 Fibonacci 结果：");
+  putint(fib2);
+  putch(10);
+
+  
+  // 其他实验性数值运算
+  putstr("额外数值运算演示：\n");
+  putstr("n + 5 = "); putint(n + 5); putch(10);
+  putstr("n - 3 = "); putint(n - 3); putch(10);
+  putstr("n * 2 = "); putint(n * 2); putch(10);
+  putstr("n / 2 = "); putint(n / 2); putch(10);
+  putstr("n % 2 = "); putint(n % 2); putch(10);
+
+  return 0;
+}
