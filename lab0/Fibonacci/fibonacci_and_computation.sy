@@ -6,7 +6,7 @@
  * 特性：
  * 1. 输入与输出
  * 2. 递归与迭代
- * 3. 数值运算（+ - * / %）
+ * 3. 数值运算
  * 4. 条件分支（if-else, 嵌套条件）
  * 5. 循环（while）
  * 6. 多函数调用
@@ -69,9 +69,7 @@ int main() {
   // 其他实验性数值运算
   putstr("额外数值运算演示：\n");
   putstr("n + 5 = "); putint(n + 5); putch(10);
-  putstr("n - 3 = "); putint(n - 3); putch(10);
   putstr("n * 2 = "); putint(n * 2); putch(10);
-  putstr("n / 2 = "); putint(n / 2); putch(10);
   putstr("n % 2 = "); putint(n % 2); putch(10);
 
   return 0;
