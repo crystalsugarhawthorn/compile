@@ -11,9 +11,9 @@
 #   s0-s11 为被调用者保存寄存器（callee-saved，若函数使用需保存并在返回前恢复）；ra 保存返回地址。
 #
 # 编译示例（交叉编译，需 riscv 工具链）：
-# riscv64-unknown-elf-gcc -o fibonacci fibonacci.s lib/libsysy_riscv.a -static
+# riscv64-unknown-elf-gcc -o fibonacci_and_computation fibonacci_and_computation.s lib/libsysy_riscv.a -static
 # 运行示例（在 qemu-riscv64 下）：
-# qemu-riscv64 fibonacci
+# qemu-riscv64 fibonacci_and_computation
 
 
 .data
