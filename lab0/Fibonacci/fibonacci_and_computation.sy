@@ -67,10 +67,10 @@ int main() {
 
   
   // 其他实验性数值运算
-  putstr("额外数值运算演示：\n");
-  putstr("n + 5 = "); putint(n + 5); putch(10);
-  putstr("n * 2 = "); putint(n * 2); putch(10);
-  putstr("n % 2 = "); putint(n % 2); putch(10);
+  putf("额外数值运算演示：\n");
+  putf("n + 5 = "); putint(n + 5); putch(10);
+  putf("n * 2 = "); putint(n * 2); putch(10);
+  putf("n % 2 = "); putint(n % 2); putch(10);
 
   return 0;
 }
